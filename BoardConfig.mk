@@ -44,6 +44,8 @@ TARGET_KERNEL_CLANG_VERSION := 9.0.6
 TARGET_KERNEL_CONFIG := vendor/trinket-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/realme/RMX1911
 
+BUILD_BROKEN_DUP_RULES := true
+
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := trinket
