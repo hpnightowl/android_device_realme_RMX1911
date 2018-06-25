@@ -13,4 +13,8 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vendor.qti.gnss@3.0-service.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibility_matrix.xml
 
+# Assert
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+
 -include vendor/realme/RMX1911/BoardConfigVendor.mk
+
