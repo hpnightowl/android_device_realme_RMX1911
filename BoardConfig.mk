@@ -16,5 +16,10 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibi
 # Assert
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
+# Verified Boot
+BOARD_AVB_ENABLE := true
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 2
+
 -include vendor/realme/RMX1911/BoardConfigVendor.mk
+
 
