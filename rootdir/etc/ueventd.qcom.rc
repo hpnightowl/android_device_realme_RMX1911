@@ -169,12 +169,9 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/qvr_external_sensor_ioctl      0660  system  system
 /sys/kernel/qvr_external_sensor/fd  0660  system  system
 
-#ifdef VENDOR_EDIT
-#Qingwen.Liu@RM.BSP.Fingerprint.Basic. 2019/09/29, add for egis device
 /dev/esfp0                0660   system     system
 /sys/bus/platform/devices/egis_input navigation_enable 0660  system  system
 /sys/bus/platform/devices/egis_input navigation_event  0660  system  system
-#endif VENDOR_EDIT
 
 # wlan
 /dev/wcnss_wlan           0660   system     system
