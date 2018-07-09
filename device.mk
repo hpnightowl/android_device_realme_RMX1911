@@ -83,6 +83,10 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libvulkan
 
+#  Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.realme_sdm665
+
 # fstab
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom \
