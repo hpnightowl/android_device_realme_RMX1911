@@ -43,7 +43,9 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := 9.0.6
 TARGET_KERNEL_CONFIG := vendor/trinket-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/realme/RMX1911
-endif
+
+# ANT+
+BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
@@ -65,13 +67,13 @@ BOARD_USES_PRODUCTIMAGE := true
 TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_VENDOR := vendor
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2020-05-05
+
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := trinket
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno610
-
-# Security patch level
-VENDOR_SECURITY_PATCH := 2020-05-05
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

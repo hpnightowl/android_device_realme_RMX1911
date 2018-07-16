@@ -134,7 +134,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-qti.xml \
 
-# Ramdisk
+# ANT+
+PRODUCT_PACKAGES += \
+    AntHalService
+
+# init scripts
 PRODUCT_PACKAGES += \
     engineer_vendor_shell.sh \
     init.class_main.sh \
