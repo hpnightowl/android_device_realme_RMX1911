@@ -182,6 +182,10 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     ueventd.qcom.rc \
 
+# Power
+PRODUCT_PACKAGES += \
+    power.qcom
+
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/configstore@1.1.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/configstore@1.1.policy \
