@@ -87,6 +87,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Security patch level
 VENDOR_SECURITY_PATCH := 2020-05-05
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
+
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
     $(DEVICE_PATH)/sepolicy/private \
