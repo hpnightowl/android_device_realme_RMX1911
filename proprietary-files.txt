@@ -4704,3 +4704,6 @@ vendor/lib64/vendor.qti.hardware.servicetracker@1.0.so
 vendor/lib64/vendor.qti.hardware.servicetracker@1.1.so
 vendor/lib64/vendor.qti.hardware.sigma_miracast@1.0.so
 vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so
+
+# HotwordEnrollment
+-priv-app/HotwordEnrollmentOKGoogleWCD9340/HotwordEnrollmentOKGoogleWCD9340.apk
