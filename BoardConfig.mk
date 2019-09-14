@@ -123,6 +123,9 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 # RIL
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
+# Power
+TARGET_USES_INTERACTION_BOOST := true
+
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Verified Boot
@@ -140,4 +143,4 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # Inherit from the proprietary version
--include vendor/realme/RMDX1911/BoardConfigVendor.mk
+-include vendor/realme/RMX1911/BoardConfigVendor.mk
