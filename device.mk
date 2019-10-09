@@ -81,8 +81,7 @@ PRODUCT_COPY_FILES += \
 
 # IMS
 PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml
+    ims-ext-common
 
 # Keylayout
 PRODUCT_COPY_FILES += \
