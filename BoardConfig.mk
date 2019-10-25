@@ -44,6 +44,14 @@ TARGET_KERNEL_CLANG_VERSION := 9.0.6
 TARGET_KERNEL_CONFIG := vendor/trinket-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/realme/RMX1911
 
+# Platform
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_BOARD_PLATFORM := trinket
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno610
+
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
@@ -69,11 +77,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2020-05-05
-
-# Platform
-BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOARD_PLATFORM := trinket
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno610
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
