@@ -45,6 +45,11 @@ TARGET_KERNEL_CONFIG := vendor/trinket-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/realme/RMX1911
 endif
 
+# Platform
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_BOARD_PLATFORM := trinket
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno610
+
 # Security patch level
 VENDOR_SECURITY_PATCH := 2020-05-05
 
