@@ -3502,47 +3502,6 @@ vendor/lib64/libOmxVenc.so
 vendor/lib64/libplatformconfig.so
 vendor/lib64/libstagefrighthw.so
 
-# NFC
--app/NXPNfcNci/NXPNfcNci.apk
-etc/nfcee_access.xml
-framework/com.nxp.nfc.jar
-vendor/bin/hw/android.hardware.nfc@1.2-service
-vendor/bin/hw/android.hardware.secure_element@1.1-service
-vendor/etc/init.pn8x.nfc.rc
-vendor/etc/init/android.hardware.nfc@1.2-service.rc
-vendor/etc/init/android.hardware.secure_element@1.1-service.rc
-vendor/etc/init/init.pn8x.nfc.rc
-vendor/etc/libese-nxp.conf
-vendor/etc/libnfc-nci.conf
-vendor/etc/libnfc-nxp-pnscr.conf
-vendor/etc/libnfc-nxp.conf
-vendor/etc/libnfc-nxp_RF.conf
-vendor/etc/libnfc_beijing_config.conf
-vendor/etc/libnfc_guangzhou_config.conf
-vendor/etc/libnfc_shenzhen_config.conf
-vendor/etc/nfc/com.oppo.nfc_feature.xml
-vendor/etc/sn100u_nfcon.pnscr
-vendor/lib/ese_spi_nxp.so
-vendor/lib/hal_libnfc.so
-vendor/lib/libpn553_fw.so
-vendor/lib/ls_client.so
-vendor/lib/nfc_nci.pn54x.default.so
-vendor/lib/vendor.nxp.eventprocessor@1.0.so
-vendor/lib/vendor.nxp.nxpese@1.0.so
-vendor/lib/vendor.nxp.nxpnfc@1.0.so
-vendor/lib64/ese_spi_nxp.so
-vendor/lib64/hal_libnfc.so
-vendor/lib64/ls_client.so
-vendor/lib64/nfc_nci.pn54x.default.so
-vendor/lib64/vendor.nxp.eventprocessor@1.0.so
-vendor/lib64/vendor.nxp.nxpese@1.0.so
-vendor/lib64/vendor.nxp.nxpnfc@1.0.so
-vendor/odm/etc/vintf/manifest_nfc_ese.xml
-vendor/odm/etc/vintf/manifest_nfc_ese_single_sim.xml
-vendor/odm/etc/vintf/manifest_secure_element_uicc.xml
-vendor/odm/etc/vintf/manifest_secure_element_uicc_single_sim.xml
-vendor/odm/etc/vintf/manifest_sonyNfc_single_sim.xml
-
 # Neural-networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti
 vendor/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc
