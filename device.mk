@@ -4,12 +4,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk
 # AID/fs configs
 PRODUCT_PACKAGES += \
     fs_config_files
-    
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     tinymix
-  
+
 PRODUCT_COPY_FILES += \
 #    $(LOCAL_PATH)/audio/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
 #    $(LOCAL_PATH)/audio/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
