@@ -231,8 +231,9 @@ PRODUCT_PACKAGES += \
  #   init.wlan.qcom.rc \
  #   init.wlan.target.rc \
   #  fstab-wlan.qcom \
+    init.recovery.qcom.rc \
     fstab.qcom \
-    ueventd.qcom.rc
+    ueventd.qcom.rc 
 
 # Power
 PRODUCT_PACKAGES += \
