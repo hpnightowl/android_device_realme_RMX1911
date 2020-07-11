@@ -1,6 +1,10 @@
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk
 
+# AID/fs configs
+PRODUCT_PACKAGES += \
+    fs_config_files
+    
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
