@@ -20,6 +20,9 @@ TARGET_USES_64_BIT_BINDER := true
 # Assert
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
+# Treble
+BOARD_VNDK_VERSION := current
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := trinket
 TARGET_NO_BOOTLOADER := true
@@ -42,6 +45,7 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := 9.0.6
 TARGET_KERNEL_CONFIG := vendor/trinket-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/realme/RMX1911
+endif
 
 BUILD_BROKEN_DUP_RULES := true
 
