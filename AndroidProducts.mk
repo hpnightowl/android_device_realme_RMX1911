@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_RMX1911.mk
+    $(LOCAL_DIR)/potato_RMX1911.mk
