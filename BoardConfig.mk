@@ -54,10 +54,6 @@ ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_SOURCE := kernel/realme/trinket
 endif
 
-#Board init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_rmx1911
-TARGET_RECOVERY_DEVICE_MODULES := libinit_rmx1911
-
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
