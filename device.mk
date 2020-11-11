@@ -60,7 +60,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     BluetoothQti
 
-
 # Common init scripts
 PRODUCT_PACKAGES += \
     init.qcom.rc \
@@ -75,7 +74,7 @@ PRODUCT_PACKAGES += \
 
 #  Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.realme_sdm665
+    android.hardware.light@2.0-service.RMX1911
 
 # fstab
 PRODUCT_COPY_FILES += \
