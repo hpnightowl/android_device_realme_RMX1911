@@ -127,6 +127,12 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3758096384
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 57453555712
 
+BOARD_ROOT_EXTRA_SYMLINKS := \
+    /mnt/vendor/persist:/persist \
+    /vendor/bt_firmware:/bt_firmware \
+    /vendor/dsp:/dsp \
+    /vendor/firmware_mnt:/firmware
+    
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USES_MKE2FS := true
@@ -134,6 +140,9 @@ TARGET_USES_MKE2FS := true
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
 
 # RenderScript
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
@@ -144,10 +153,6 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 
-# Sepolicy
-include device/qcom/sepolicy/SEPolicy.mk
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-SELINUX_IGNORE_NEVERALLOWS := true
 
 #Treble
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
