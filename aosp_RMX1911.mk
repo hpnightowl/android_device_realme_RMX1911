@@ -5,7 +5,7 @@
 #
 
 $(call inherit-product, device/realme/RMX1911/device.mk)
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Device identifier. This must come after all inclusions.
