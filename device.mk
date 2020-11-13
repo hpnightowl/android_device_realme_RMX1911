@@ -29,7 +29,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 # Properties
--include $(LOCAL_PATH)/vendor_props.mk
+-include $(LOCAL_PATH)/system_props.mk
 -include $(LOCAL_PATH)/product_prop.mk
 
 # Screen density
