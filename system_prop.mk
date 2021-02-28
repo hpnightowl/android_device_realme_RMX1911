@@ -1,157 +1,149 @@
-# Audio
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.media_vol_steps=25 \
-    ro.config.vc_call_vol_steps=7 \
-    ro.qc.sdk.audio.fluencetype=none \
-    persist.audio.fluence.voicecall=true \
-    persist.audio.fluence.voicerec=false \
-    persist.audio.fluence.speaker=true
+#
+# system.prop for trinket
+#
 
-# Bluetooth
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.bluetooth.soc=cherokee \
-    persist.vendor.bt.a2dp.aac_whitelist=false \
-    persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac \
-    persist.vendor.btstack.enable.splita2dp=true \
-    persist.vendor.btstack.enable.twsplus=true \
-    persist.vendor.btstack.enable.twsplussho=true \
-    ro.bluetooth.library_name=libbluetooth_qti.so \
-    persist.bluetooth.bqr.event_mask=0x8000000E \
-    persist.bluetooth.bqr.min_interval_ms=60000 \
-    persist.bluetooth.bqr.choppy_threshold=9,6 \
-    persist.bluetooth.disableabsvol=false \
-    persist.vendor.service.bt.iot.enablelogging=true \
-    persist.vendor.bluetooth.a2dp.hal.implementation=true \
-    persist.vendor.bt.a2dp.hal.implementation=true \
-    persist.bluetooth.disableinbandringing=false \
-    persist.bluetooth.specificatcmdsenable=true \
-    persist.vendor.bluetooth.modem_nv_support=true \
-    persist.vendor.service.bdroid.soc.alwayson=true \
-    persist.vendor.service.bt.iotinfo.report.enable=true
+rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
+#rild.libargs=-d /dev/smd0
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+ril.subscription.types=NV,RUIM
+DEVICE_PROVISIONED=1
+# Set network mode to (T/L/G/W/1X/EVDO, T/L/G/W/1X/EVDO) for 7+7 mode device on DSDS mode
+ro.telephony.default_network=22,22
 
-# Camera
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.camera.light_ae.enable=1 \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
+dalvik.vm.heapsize=36m
+dev.pm.dyn_samplingrate=1
 
-# Charger
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.charger.enable_suspend=true
+#ro.hdmi.enable=true
+#persist.speaker.prot.enable=false
+qcom.hw.aac.encoder=true
+#
+# system props for the cne module
+#
+persist.vendor.cne.feature=1
 
-# CNE
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.cne.feature=0 \
-    persist.vendor.dpm.feature=0
+#system props for the MM modules
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-scan=true
+mmp.enable.3g2=true
+media.aac_51_output_enabled=true
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+#13631487 is decimal sum of supported codecs in AAL
+#codecs:(PARSER_)AAC AC3 AMR_NB AMR_WB ASF AVI DTS FLV 3GP 3G2 MKV MP2PS MP2TS MP3 OGG QCP WAV FLAC AIFF APE DSD MOV XVID
+vendor.mm.enable.qcom_parser=63963135
+persist.mm.enable.prefetch=true
 
-# Camera
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.camera.hfr.enable=1 \
-    ro.camera.relight.enable=0 \
-    ro.camera.attr.detect.enable=1 \
-    ro.camera.temperature.limit=470 
+#
+# system props for the data modules
+#
+ro.vendor.use_data_netmgrd=true
+persist.vendor.data.mode=concurrent
 
-# Data modules
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.data.netmgrd.qos.enable=true \
-    persist.vendor.data.profile_update=true \
-    persist.vendor.data.mode=concurrent \
-    ro.vendor.use_data_netmgrd=true
+#system props for time-services
+persist.timed.enable=true
 
-# Display post-processing
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.latch_unsignaled=1 \
-    debug.sf.enable_gl_backpressure=1 \
-    ro.vendor.display.ad=1 \
-    ro.vendor.display.sensortype=2 \
-    ro.vendor.display.ad.sdr_calib_data=/vendor/etc/OPPO_OLED_AD_calib.cfg \
-    ro.vendor.display.svi=1 \
-    vendor.display.svi.config=1 \
-    vendor.display.svi.config_path=/vendor/etc/svi_config.xml
+# system property for maximum number of HFP client connections
+bt.max.hfpclient.connections=1
 
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    debug.sf.use_phase_offsets_as_durations=1 \
-    debug.sf.late.sf.duration=10500000 \
-    debug.sf.late.app.duration=20500000 \
-    debug.sf.early.sf.duration=21000000 \
-    debug.sf.early.app.duration=16500000 \
-    debug.sf.earlyGl.sf.duration=13500000 \
-    debug.sf.earlyGl.app.duration=21000000
+#
+# System props for telephony
+# System prop to turn on CdmaLTEPhone always
+telephony.lteOnCdmaDevice=1
 
-# Fingerprint
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.boot.realme.lockstate=0
+#Simulate sdcard on /data/media
+#
+persist.fuse_sdcard=true
 
-# Graphics
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.enable_hwc_vds=1 \
-    dev.pm.dyn_samplingrate=1 \
-    persist.front.skipdisplay.enable=1
+#system prop for Bluetooth SOC type
+vendor.bluetooth.soc=cherokee
+ro.bluetooth.library_name=libbluetooth_qti.so
+persist.vendor.btstack.enable.splita2dp=true
+persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 
-# Media
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.settings.xml=/system/etc/media_profiles_vendor.xml \
-    media.stagefright.thumbnail.prefer_hw_codecs=true \
-    persist.mm.enable.prefetch=true \
-    vendor.media.vpp.enable=true
+#system prop for wipower support
+ro.bluetooth.emb_wp_mode=true
+ro.bluetooth.wipower=true
 
-# Memory optimizations
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.sys.fw.bservice_enable=true
+#
+#snapdragon value add features
+#
+ro.qc.sdk.audio.ssr=false
 
-# Netflix custom property
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.netflix.bsp_rev=Q6250-19132-1
+##fluencetype can be "fluence" or "fluencepro" or "none"
+ro.qc.sdk.audio.fluencetype=none
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicerec=false
+persist.audio.fluence.speaker=true
 
-# Nfc
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.nfc.port=I2C \
-    persist.nfc.smartcard.recorder.enable=true \
-    persist.sys.nfc.disPowerSave=1 \
-    ro.camera.notify_nfc=1
+#system prop for RmNet Data
+persist.data.df.dev_name=rmnet_usb0
 
-# RCS and IMS
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.dbg.ims_volte_enable=1 \
-    persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=1 \
-    persist.dbg.wfc_avail_ovr=1 \
-    persist.rcs.supported=0 \
-    persist.vendor.ims.disableQXDMLogs=0 \
-    persist.vendor.ims.disableADBLogs=0 \
-    persist.vendor.ims.disableDebugLogs=0 \
-    persist.vendor.ims.disableIMSLogs=0 \
-    persist.vendor.ims.rtp.enableqxdm=3 \
-    persist.vendor.ims.vt.enableadb=3
+#property to enable user to access Google WFD settings
+persist.debug.wfd.enable=1
+##property to choose between virtual/external wfd display
+persist.sys.wfd.virtual=0
 
-# RIL
-PRODUCT_PROPERTY_OVERRIDES += \
-    DEVICE_PROVISIONED=1 \
-    persist.sys.fflag.override.settings_network_and_internet_v2=true \
-    persist.radio.hvolte.enable=1 \
-    persist.vendor.radio.atfwd.start=true \
-    persist.vendor.radio.lte_vrte_ltd=1 \
-    persist.vendor.radio.cs_srv_type=1 \
-    persist.vendor.radio.rat_on=combine \
-    ril.subscription.types=NV,RUIM \
-    persist.radio.add_power_save=1 \
-    persist.radio.multisim.config=dsds \
-    persist.radio.custom_exp_ecc=1 \
-    persist.vendor.radio.process_sups_ind=1 \
-    persist.vendor.radio.data_con_rprt=1 \
-    persist.data.iwlan.enable=true \
-    persist.data.iwlan.rekey=4294967295 \
-    ro.telephony.default_network=22,20 \
-    telephony.lteOnCdmaDevice=1
+# enable tunnel encoding for amrwb
+tunnel.audio.encode = true
 
-# Sensors
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qti.sensors.wu=false
+#Buffer size in kbytes for compress offload playback
+audio.offload.buffer.size.kb=32
 
-# SSR
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.ssr.enable_ramdumps=0 \
-    persist.vendor.ssr.restart_level=ALL_ENABLE
+#Enable offload audio video playback by default
+av.offload.enable=true
 
-# Zygote
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.device_config.runtime_native.usap_pool_enabled=true
+#enable voice path for PCM VoIP by default
+use.voice.path.for.pcm.voip=true
+
+# system prop for NFC DT
+ro.nfc.port=I2C
+
+#enable dsp gapless mode by default
+audio.offload.gapless.enabled=true
+
+#initialize QCA1530 detection
+sys.qca1530=detect
+
+#Enable stm events
+persist.debug.coresight.config=stm-events
+
+#Enable virtual display.
+debug.sf.enable_hwc_vds=1
+
+#hwui properties
+ro.hwui.texture_cache_size=72
+ro.hwui.layer_cache_size=48
+ro.hwui.r_buffer_cache_size=8
+ro.hwui.path_cache_size=32
+ro.hwui.gradient_cache_size=1
+ro.hwui.drop_shadow_cache_size=6
+ro.hwui.texture_cache_flushrate=0.4
+ro.hwui.text_small_cache_width=1024
+ro.hwui.text_small_cache_height=1024
+ro.hwui.text_large_cache_width=2048
+ro.hwui.text_large_cache_height=1024
+
+config.disable_rtt=true
+
+#Bringup properties
+persist.radio.atfwd.start=false
+ro.kernel.qemu.gles=0
+qemu.hw.mainkeys=0
+
+#Expose aux camera for below packages
+vendor.camera.aux.packagelist=org.codeaurora.snapcam
+
+#Whitelisting the below packages
+persist.vendor.camera.privapp.list=org.codeaurora.snapcam
+persist.camera.privapp.list=org.codeaurora.snapcam
